@@ -1,0 +1,44 @@
+@import '/src/main-style.scss';
+
+:host {
+    .budget-items-section {
+        padding-top: 50px;
+        margin-top: 50px;
+        border-top: 1px solid white;
+    
+        .budget-items-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 40px;
+    
+            .income-column {
+                h4 {
+                color: $positive-number-color;
+                text-align: center;
+                }
+            }
+    
+            .expense-column {
+                h4 {
+                color: $negative-number-color;
+                text-align: center;
+                }
+            }
+        }
+    
+        @media only screen and (min-device-width: 769px) and (max-device-width: 1024px)  {
+            .budget-items-container  {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 40px;
+            }
+        }
+    
+           
+        @media only screen and (max-device-width: 768px) {
+            .budget-items-container {
+                display: block;
+            }
+        }
+    }
+}

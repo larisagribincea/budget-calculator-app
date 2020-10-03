@@ -1,0 +1,22 @@
+<form class="form-inline" #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
+    <div class="form-group mb-2 row">
+      <label class="col-sm-3 col-form-label">Amount:</label>
+      <div class="col-sm-9">
+      <input type="number" required name="amount" placeholder="eg: 1000/-2000"class="form-control"[ngModel]="item.amount">
+      </div>
+    </div>
+    <div class="form-group mb-2 row">
+      <label class="col-sm-3 col-form-label">Description:</label>
+      <div class="col-sm-9">
+      <input type="text" required placeholder="eg: Income" name="description" class="form-control" [ngModel]="item.description">
+    </div>
+  </div>
+    <div class="bottom-button">
+    <button type="submit" class="btn btn-primary"
+    [ngClass]="{'btn-primary': isNewItem, 'btn-info': !isNewItem}" 
+    [disabled]="!itemForm.valid">
+    <span *ngIf="isNewItem">ADD</span>
+    <span *ngIf="!isNewItem">SAVE</span>
+  </button>
+</div>
+  </form>

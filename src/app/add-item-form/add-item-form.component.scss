@@ -1,0 +1,14 @@
+@import '/src/main-style.scss';
+
+:host {
+    .bottom-button {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 30px;
+    }
+    
+    label {
+        font-size: 20px;
+        color: rgba($color: $second-color, $alpha: 1.0)
+    }
+}

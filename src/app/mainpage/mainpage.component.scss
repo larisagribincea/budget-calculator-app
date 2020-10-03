@@ -1,0 +1,51 @@
+@import '/src/main-style.scss';
+
+:host {
+    .main-section {
+        max-width: 650px;
+        margin: 0 auto;
+        background-color: rgba($second-color, 0.35);
+        min-height: 100%;
+        padding: 30px 50px;
+        backdrop-filter: blur(6px);
+    
+        .top-bar-wrapper {
+            width: 100%;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .total-buget-section {
+            background-image: $total-background-color;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+     
+            h2 {
+                &.positive-budget {
+                    color: lighten($positive-number-color,$amount: 15%);
+                }
+    
+                &.negative-budget {
+                    color: lighten($negative-number-color,$amount: 15%);
+                }
+            }
+        }
+    
+        .add-item-section {
+            margin-top: 60px;
+        }
+    }
+
+    //mobile responsive
+    @media only screen and (max-device-width: 768px) {
+        .main-section {
+            max-width: 100%;
+        }
+    }
+}
+
+

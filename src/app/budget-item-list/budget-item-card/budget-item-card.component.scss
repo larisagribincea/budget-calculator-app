@@ -1,0 +1,77 @@
+@import '/./src/main-style.scss';
+
+.root {
+    // display: flex;
+    // width: 100%;
+    position: relative;
+
+    &:hover {
+        .x-icon-button {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .x-icon-button {
+        position: absolute;
+        right: -13px;
+        top: -13px;
+        background-color: #dddddd;
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #5c5c5c;
+        opacity: 0;
+        transform: scale(0);
+        transition: opacity 0.2s ease-in, transform 0.2s ease-in;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+}
+
+.budget-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: $second-background-color;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+
+    .description {
+        font-size: 18px;
+    }
+
+    .amount {
+        padding: 5px;
+        border-radius: 3px;
+    }
+}
+
+.expense {
+    span {
+        color: $negative-number-color;
+    }
+
+    .amount{
+        background-color: rgba($negative-number-color, 0.2);
+    }
+}
+
+.income {
+    span {
+        color: $positive-number-color;
+    }
+
+    .amount{
+        background-color: rgba($positive-number-color, 0.2);
+    }
+}

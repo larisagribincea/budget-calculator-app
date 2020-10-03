@@ -1,0 +1,37 @@
+//global style for all app
+
+//colors
+$main-color: #15002c;
+$second-color: #f1f1f1;
+$second-background-color: #ececec;
+$positive-number-color: #00ccab;
+$negative-number-color: #9f0010;
+$main-background-color: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+$total-background-color: linear-gradient(-20deg, #5c5dbc 0%, #183a99 100%);
+
+
+//font
+html, body  {
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: 0;
+    background-image: url("/assets/img/background-budget-image.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: $second-color;
+    text-align: center;
+}
+
+h2 {
+    font-size: 50px;
+    color: $second-color;
+    font-weight: 300;
+}
